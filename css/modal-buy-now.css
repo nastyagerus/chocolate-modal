@@ -29,6 +29,9 @@ img {
   height: auto;
 }
 
+:root {
+  --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* ================================================MODAL-BUY-NOW=============================================================================== */
 
 .container {
@@ -113,10 +116,6 @@ img {
   height: 24px;
 }
 
-.modal-form-buy {
-  display: flex;
-  flex-direction: column;
-}
 .title-modal-bn {
   font-style: normal;
   font-weight: 600;
@@ -135,7 +134,10 @@ img {
 .box-title-modal {
   color: #fd9222;
 }
-
+.swiper {
+  width: 231px;
+  height: 284px;
+}
 .modal-slide-wrapper {
   margin-bottom: 32px;
   text-align: center;
@@ -165,6 +167,20 @@ img {
   background: #fafafa;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 100px;
+
+  transition: background-color var(--transition-dur-and-func),
+    color var(--transition-dur-and-func);
+}
+
+.modal-bn-product-button:hover,
+.modal-bn-product-button:focus {
+  background-color: #fcf1e0;
+  color: #fd9222;
+}
+
+.modal-form-buy {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-bn-input-desc {
@@ -189,13 +205,19 @@ img {
 .modal-bn-input,
 .modal-bn-textarea {
   padding: 14px 18px;
-
   width: 100%;
   height: 45px;
-
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: black;
   border: 1.5px solid rgba(17, 17, 17, 0.05);
   filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
   border-radius: 8px;
+  background-color: transparent;
 }
 .modal-bn-input-name::placeholder,
 .modal-bn-input::placeholder,
@@ -214,7 +236,7 @@ img {
 }
 
 .modal-bn-input.input-phone {
-  padding-left: 106px;
+  padding-left: 107px;
 }
 
 .modal-bn-phone-icon {
@@ -223,14 +245,24 @@ img {
 }
 .modal-wrapper-phone-hint {
   position: absolute;
-  top: 50%;
-  left: 18px;
+  /* top: 50%;
+  left: 18px; */
+  top: 84%;
+  left: -85px;
   transform: translateY(-50%);
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.modal-phone-hint-number {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
 }
 
 .modal-wrapper-phone-hint::after {
@@ -262,9 +294,7 @@ textarea {
 }
 
 .modal-bn-textarea {
-  width: 100%;
   height: 91px;
-  border: 0;
 }
 .modal-bn-button-submit {
   width: 109px;
@@ -282,6 +312,9 @@ textarea {
   font-size: 14px;
   line-height: 1.22;
   color: #ffffff;
+
+  transition: background-color var(--transition-dur-and-func),
+    color var(--transition-dur-and-func);
 }
 
 .modal-bn-button-submit:hover,
@@ -291,15 +324,28 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-  .modal-slide-wrapper.option-chocolate-second,
-  .modal-slide-wrapper.option-chocolate-third {
+  .modal-bn-wrapper-img {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .swiper {
+    display: none;
+  }
+
   .modal-bn {
     width: 609px;
+  }
+  .title-modal-bn {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  .modal-bn-wrapper-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
   }
 
   .modal-slide-wrapper {
@@ -307,6 +353,7 @@ textarea {
     height: 196px;
     margin-left: 0;
     margin-right: 0;
+    padding: 24px 20px 18px 20px;
   }
 
   .modal-bn-product-button {
@@ -320,6 +367,13 @@ textarea {
   .modal-bn-input-name {
     margin-bottom: 0;
   }
+  .modal-bn-input-name,
+  .modal-bn-input,
+  .modal-bn-textarea {
+    height: 66px;
+    padding: 22px 24px;
+    font-size: 14px;
+  }
 
   .modal-bn-input-name::placeholder,
   .modal-bn-input::placeholder,
@@ -332,16 +386,43 @@ textarea {
     align-items: center;
     gap: 21px;
   }
-  .modal-bn-wrapper-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+
+  .modal-bn-phone-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .modal-phone-hint-number {
+    font-size: 18px;
   }
 
+  .modal-bn-card-icon {
+    width: 44px;
+    height: 30px;
+  }
+  .modal-wrapper-phone-hint {
+    gap: 18px;
+    left: -78px;
+  }
+  .modal-wrapper-phone-hint::after {
+    left: 110px;
+    width: 40px;
+  }
+
+  .modal-bn-input.input-phone {
+    padding-left: 177px;
+  }
+
+  .modal-bn-input.input-card {
+    padding-right: 60px;
+  }
+
+  .modal-bn-textarea {
+    height: 137px;
+  }
   .modal-bn-button-submit {
     width: 133px;
-height: 45px;
+    height: 45px;
+  }
 }
 /* ================================================MODAL-THANK-YOU=============================================================================== */
 .modal-bn-thank {
