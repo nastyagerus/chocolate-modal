@@ -47,95 +47,94 @@
             <span class="box-title-modal">BUY</span> NOW
           </p>
           <!-- Mobile version -->
-             <div class="swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">              
-                    <div class="modal-slide-wrapper">
-                      <picture>
-                        <source
-                          srcset="
-                            ./images/chocolate-piece-tab-desc@1x.jpg 1x,
-                            ./images/chocolate-piece-tab-desc@2x.jpg 2x
-                          "
-                          media="(min-width:768px)"
-                        />
-                        <source
-                          srcset="./images/chocolate-piece-mob@2x.jpg 2x"
-                          media="(max-width:767px)"
-                        />
-                        <img
-                          src="./images/chocolate-piece-mob@1x.jpg"
-                          alt="chocolate-piece"
-                          width="167px"
-                          height="148px"
-                        />
-                      </picture>
-                      <button type="button" class="modal-bn-product-button">
-                        100 g
-                      </button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">              
-                    <div class="modal-slide-wrapper option-chocolate-second">
-                      <picture>
-                        <source
-                          srcset="
-                            ./images/chocolate-milk-tab-desc@1x.jpg 1x,
-                            ./images/chocolate-milk-tab-desc@2x.jpg 2x
-                          "
-                          media="(min-width:768px)"
-                        />
-                        <source
-                          srcset="./images/chocolate-milk-mob@2x.jpg 2x"
-                          media="(max-width:767px)"
-                        />
-                        <img
-                          src="./images/chocolate-milk-mob@1x.jpg"
-                          alt="chocolate-piece"
-                          width="167px"
-                          height="148px"
-                        />
-                      </picture>
-                      <button type="button" class="modal-bn-product-button">
-                        200 g
-                      </button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">              
-                    <div class="modal-slide-wrapper option-chocolate-third">
-                      <picture>
-                        <source
-                          srcset="
-                            ./images/chocolate-bar-dark-tab-desc@1x.jpg 1x,
-                            ./images/chocolate-bar-dark-tab-desc@2x.jpg 2x
-                          "
-                          media="(min-width:768px)"
-                        />
-                        <source
-                          srcset="./images/chocolate-bar-dark-mob@2x.jpg 2x"
-                          media="(max-width:767px)"
-                        />
-                        <img
-                          src="./images/chocolate-bar-dark-mob@1x.jpg"
-                          alt="chocolate-piece"
-                          width="167px"
-                          height="148px"
-                        />
-                      </picture>
-                      <button type="button" class="modal-bn-product-button">
-                        300 g
-                      </button>
-                    </div>
-                  </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="modal-bn-product-item">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/chocolate-piece-tab-desc@1x.jpg 1x,
+                        ./images/chocolate-piece-tab-desc@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/chocolate-piece-mob@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/chocolate-piece-mob@1x.jpg"
+                      alt="chocolate-piece"
+                      width="167px"
+                      height="148px"
+                    />
+                  </picture>
+                  <button type="button" class="modal-bn-product-button">
+                    100 g
+                  </button>
                 </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
               </div>
+              <div class="swiper-slide">
+                <div class="modal-bn-product-item option-chocolate-second">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/chocolate-milk-tab-desc@1x.jpg 1x,
+                        ./images/chocolate-milk-tab-desc@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/chocolate-milk-mob@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/chocolate-milk-mob@1x.jpg"
+                      alt="chocolate-piece"
+                      width="167px"
+                      height="148px"
+                    />
+                  </picture>
+                  <button type="button" class="modal-bn-product-button">
+                    200 g
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="modal-bn-product-item option-chocolate-third">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/chocolate-bar-dark-tab-desc@1x.jpg 1x,
+                        ./images/chocolate-bar-dark-tab-desc@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/chocolate-bar-dark-mob@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/chocolate-bar-dark-mob@1x.jpg"
+                      alt="chocolate-piece"
+                      width="167px"
+                      height="148px"
+                    />
+                  </picture>
+                  <button type="button" class="modal-bn-product-button">
+                    300 g
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-pagination"></div>
+          </div>
           <!-- Tab-desc version -->
-          <div class="modal-bn-wrapper-img">
-            <div class="modal-slide-wrapper">
+          <ul class="modal-bn-product-list">
+            <li class="modal-bn-product-item">
               <picture>
                 <source
                   srcset="
@@ -158,8 +157,8 @@
               <button type="button" class="modal-bn-product-button">
                 100 g
               </button>
-            </div>
-            <div class="modal-slide-wrapper option-chocolate-second">
+            </li>
+            <li class="modal-bn-product-item option-chocolate-second">
               <picture>
                 <source
                   srcset="
@@ -182,8 +181,8 @@
               <button type="button" class="modal-bn-product-button">
                 200 g
               </button>
-            </div>
-            <div class="modal-slide-wrapper option-chocolate-third">
+            </li>
+            <li class="modal-bn-product-item option-chocolate-third">
               <picture>
                 <source
                   srcset="
@@ -206,8 +205,8 @@
               <button type="button" class="modal-bn-product-button">
                 300 g
               </button>
-            </div>
-          </div>
+            </li>
+          </ul>
 
           <form class="modal-form-buy">
             <label class="modal-bn-form-field">
@@ -236,15 +235,16 @@
                 placeholder="Enter your email"
               />
             </label>
-            <label class="modal-bn-form-field"
-              <span class="modal-bn-input-desc">Phone number</span>
+
+            <label class="modal-bn-form-field">
+              <span class="modal-bn-input-desc"> Phone number </span>
               <span class="modal-input-wrapper">
                 <span class="modal-wrapper-phone-hint">
                   <svg class="modal-bn-phone-icon">
                     <use href="./images/icons.svg#ukr-flag-number"></use>
                   </svg>
-                  <p class="modal-phone-hint-number">+380</p></span
-                >
+                  <p class="modal-phone-hint-number">+380</p>
+                </span>
                 <input
                   class="modal-bn-input input-phone"
                   type="tel"
@@ -274,8 +274,7 @@
                 class="modal-bn-textarea"
                 name="user_comment"
                 placeholder="Enter text"
-              >
-              </textarea>
+              ></textarea>
             </label>
             <button
               class="modal-bn-button-submit"
@@ -298,7 +297,7 @@
               <use href="./images/icons.svg#x-close" stroke="#FD9222"></use>
             </svg>
           </button>
-          <p class="modal-bn-thank-phrase">THANK YOU!</p>
+          <h2 class="modal-bn-thank-phrase">THANK YOU!</h2>
           <p class="modal-bn-thank-text">
             We are glad that you ordered our chocolate and we are giving you a
             20% discount on all our products.
@@ -306,10 +305,9 @@
         </div>
       </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./modal.js"></script>
     <script src="./modal-thank.js"></script>
     <script src="./swiper.js"></script>
-
   </body>
 </html>
