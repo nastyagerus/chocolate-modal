@@ -29,6 +29,44 @@ img {
   height: auto;
 }
 
+/* ================================================MODAL-BUY-NOW=============================================================================== */
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #000000;
+} */
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 375px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 766px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1158px;
+  }
+}
+
 .backdrop-bn {
   width: 100%;
   height: 100%;
@@ -39,11 +77,18 @@ img {
   background-color: rgba(46, 47, 66, 0.4);
 }
 
+.backdrop-bn.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal-bn {
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 1;
   padding: 32px 24px;
   width: 311px;
@@ -51,15 +96,28 @@ img {
 
 .modal-bn-button {
   position: absolute;
-  display: flex;
   width: 24px;
   height: 24px;
-  top: 20px;
-  right: 20px;
+  top: 14px;
+  right: 14px;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.modal-bn-btn-close {
+  width: 24px;
+  height: 24px;
+}
+
+.modal-form-buy {
+  display: flex;
+  flex-direction: column;
+}
 .title-modal-bn {
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -70,8 +128,318 @@ img {
   text-transform: uppercase;
 
   color: #111111;
+
+  margin-bottom: 32px;
 }
 
 .box-title-modal {
   color: #fd9222;
+}
+
+.modal-slide-wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+  width: 231px;
+  height: 257px;
+
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  padding: 32px 32px 28px 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-bn-product-button {
+  margin-top: 16px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.22;
+  color: #111111;
+
+  width: 96px;
+  height: 33px;
+
+  background: #fafafa;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
+}
+
+.modal-bn-input-desc {
+  display: block;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.modal-bn-form-field {
+  margin-bottom: 18px;
+}
+.modal-bn-input-name {
+  margin-bottom: 14px;
+}
+.modal-bn-input-name,
+.modal-bn-input,
+.modal-bn-textarea {
+  padding: 14px 18px;
+
+  width: 100%;
+  height: 45px;
+
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+  border-radius: 8px;
+}
+.modal-bn-input-name::placeholder,
+.modal-bn-input::placeholder,
+.modal-bn-textarea::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.modal-input-wrapper {
+  position: relative;
+}
+
+.modal-bn-input.input-phone {
+  padding-left: 106px;
+}
+
+.modal-bn-phone-icon {
+  width: 24px;
+  height: 24px;
+}
+.modal-wrapper-phone-hint {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.modal-wrapper-phone-hint::after {
+  position: absolute;
+  left: 74px;
+  transform: rotate(90deg);
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 2px;
+}
+.modal-bn-input.input-card {
+  padding-right: 45px;
+}
+
+.modal-bn-card-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 32px;
+  height: 21px;
+  transform: translateY(-50%);
+}
+
+textarea {
+  resize: none;
+}
+
+.modal-bn-textarea {
+  width: 100%;
+  height: 91px;
+  border: 0;
+}
+.modal-bn-button-submit {
+  width: 109px;
+  height: 41px;
+  left: 24px;
+  top: 934px;
+
+  background: #fd9222;
+  border-radius: 100px;
+  border: 0;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.22;
+  color: #ffffff;
+}
+
+.modal-bn-button-submit:hover,
+.modal-bn-button-submit:focus {
+  background-color: #fcf1e0;
+  color: #fd9222;
+}
+
+@media screen and (max-width: 767px) {
+  .modal-slide-wrapper.option-chocolate-second,
+  .modal-slide-wrapper.option-chocolate-third {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-bn {
+    width: 609px;
+  }
+
+  .modal-slide-wrapper {
+    width: 160px;
+    height: 196px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .modal-bn-product-button {
+    margin-top: 14px;
+  }
+  .modal-bn-input-desc {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .modal-bn-input-name {
+    margin-bottom: 0;
+  }
+
+  .modal-bn-input-name::placeholder,
+  .modal-bn-input::placeholder,
+  .modal-bn-textarea::placeholder {
+    font-size: 18px;
+  }
+  .input-personal-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+  }
+  .modal-bn-wrapper-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .modal-bn-button-submit {
+    width: 133px;
+height: 45px;
+}
+/* ================================================MODAL-THANK-YOU=============================================================================== */
+.modal-bn-thank {
+  position: absolute;
+  width: 311px;
+  height: 350px;
+  background: #fd9222 url(../images/chocolat-desing.png) no-repeat -5px 92px fixed;
+  background-size: contain;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 84px;
+  padding-right: 24px;
+  padding-left: 68px;
+}
+
+.modal-bn-thank.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-bn.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-bn-thank-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  background: #fcf1e0;
+  border: 0;
+}
+
+.modal-bn-thank-close-icon {
+  width: 24px;
+  height: 24px;
+}
+.modal-bn-thank-phrase {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fcf1e0;
+  margin-bottom: 8px;
+}
+
+.modal-bn-thank-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  color: #fcf1e0;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-bn-thank {
+    position: absolute;
+    width: 516px;
+    height: 414px;
+    background: #fd9222 url(../images/chocolat-desing.png) no-repeat -5px 92px fixed;
+    background-size: contain;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 154px 44px 154px 164px;
+  }
+
+  .modal-bn-thank-phrase {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #fcf1e0;
+    margin-bottom: 8px;
+  }
+
+  .modal-bn-thank-text {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
 }
