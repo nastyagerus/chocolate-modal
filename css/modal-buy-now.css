@@ -42,7 +42,6 @@ img {
   margin-right: auto;
 }
 
-
 @media screen and (min-width: 480px) {
   .container {
     width: 375px;
@@ -128,7 +127,7 @@ img {
 .box-title-modal {
   color: #fd9222;
 }
-.swiper {
+.swiper.bn-swiper {
   width: 231px;
   height: 284px;
   margin-bottom: 32px;
@@ -284,7 +283,7 @@ img {
   transform: rotate(90deg);
   content: "";
   display: inline-block;
-  width: 25px;
+  width: 30px;
   height: 2px;
   background: rgba(17, 17, 17, 0.1);
   border-radius: 2px;
