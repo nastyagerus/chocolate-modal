@@ -30,7 +30,7 @@
     <!-- КНОПКА ДЛЯ ПРИКЛАДУ -->
     <main>
       <div class="container">
-        <button class="modal-bn-button-submit" type="button" data-modal-open>
+        <button class="modal-bn-button-submit" type="button" data-modal-bn-open>
           Buy now
         </button>
       </div>
@@ -38,9 +38,9 @@
 
     <div class="container">
       <!-- МОДАЛКА -->
-      <div class="backdrop-bn is-hidden" data-modal>
+      <div class="backdrop-bn is-hidden" data-modal-bn>
         <div class="modal-bn">
-          <button type="button" class="modal-bn-button" data-modal-close>
+          <button type="button" class="modal-bn-button" data-modal-bn-close>
             <svg class="modal-bn-btn-close">
               <use href="./images/icons.svg#x-close" stroke="black"></use>
             </svg>
@@ -282,7 +282,6 @@
               class="modal-bn-button-submit"
               type="button"
               data-modal-open-thank
-              data-modal-close-bn
             >
               Submit
             </button>
@@ -308,7 +307,7 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./modal.js"></script>
+    <script src="./modal-bn.js"></script>
     <script src="./modal-thank.js"></script>
     <script src="./swiper.js"></script>
   </body>
