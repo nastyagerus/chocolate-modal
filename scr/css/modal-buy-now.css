@@ -33,7 +33,7 @@ img {
   --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ================================================MODAL-BUY-NOW=============================================================================== */
-
+/* 
 .container {
   width: 100%;
   padding-left: 15px;
@@ -58,7 +58,7 @@ img {
   .container {
     width: 1158px;
   }
-}
+} */
 
 .backdrop-bn {
   width: 100%;
